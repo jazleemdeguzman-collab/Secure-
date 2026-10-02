@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #fff0f5;       
+    --container-bg: #ffffff;   
+    --primary-pink: #ff69b4;   
+    --accent-pink: #ffb6c1;    
+    --dark-pink: #c71585;      
+    --gray-text: #666666;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+.todo-container {
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(255, 105, 180, 0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+
+input[type="text"] {
+    border: 2px solid var(--accent-pink);
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-pink);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#addTaskBtn {
+    background-color: var(--primary-pink);
+    color: white;
+}
+
+#addTaskBtn:hover {
+    background-color: var(--dark-pink);
+}
+
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--bg-color);
+    gap: 8px;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--accent-pink);
+}
+
+
+.complete-btn { background-color: #e3faf2; color: #2b8a3e; }
+.edit-btn { background-color: #fff0f6; color: var(--dark-pink); }
+.remove-btn { background-color: #fff5f5; color: #e03131; }
+
+
+.counter-section {
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-pink);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
